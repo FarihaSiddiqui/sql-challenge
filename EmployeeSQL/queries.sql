@@ -66,14 +66,3 @@ FROM employees
 GROUP BY last_name
 ORDER BY COUNT(last_name) DESC 
 ;
-
-SELECT t.title , AVG(s.salary) AS avg_salary
-FROM titles AS t
-JOIN employees AS e
-ON (e.emp_title_id = t.title_id)
-JOIN salaries As s
-ON (s.emp_no = e.emp_no)
-GROUP BY t.title
-;
-
-
